@@ -1,0 +1,30 @@
+<ion-app>
+  <ion-content>
+    <h4 align="center"><b>Simulador Empréstimo</b></h4>
+    <ion-item>
+      <ion-label position="floating">Valor Emprestimo</ion-label>
+      <ion-input type="number" [(ngModel)]="valorEmprestimo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Taxa de Juros</ion-label>
+      <ion-input type="number" [(ngModel)]="taxaJuros"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Quantidade de meses</ion-label>
+      <ion-input type="number" [(ngModel)]="quantidadeMeses"></ion-input>
+    </ion-item>
+    <ion-button
+      expand="block"
+      color="secondary"
+      (click)="simulacaoEmprestimo()"
+    >
+      <ion-icon slot="start" name="cash-outline"></ion-icon>
+      Simular Financiamento
+    </ion-button>
+    <ion-label>Valor Final: {{ valorFinal }}</ion-label
+    ><br /><br />
+    <ion-label>Valor Prestação: {{ valorPrestacao }}</ion-label>
+  </ion-content>
+</ion-app>
